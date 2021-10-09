@@ -1,0 +1,25 @@
+{
+  "name": "coup-ravens",
+  "version": "1.0.0",
+  "description": "An implementation of the Coup board game using Ravens engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrhappyasthma/Coup-Ravens.git"
+  },
+  "author": "mrhappyasthma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrhappyasthma/Coup-Ravens/issues"
+  },
+  "homepage": "https://github.com/mrhappyasthma/Coup-Ravens#readme",
+  "dependencies": {
+    "@ravens-engine/core": "^0.20.0",
+    "parcel-bundler": "^1.12.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
