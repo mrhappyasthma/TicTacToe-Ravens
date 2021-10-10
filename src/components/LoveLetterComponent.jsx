@@ -8,7 +8,7 @@ export default class LoveLetterComponent extends React.Component {
   render() {
     return <>
       <div>
-        Player {this.props.client.userId} - {this.gameStatus()}
+        {this.gameStatus()}
       </div>
 
       <table>
@@ -23,16 +23,20 @@ export default class LoveLetterComponent extends React.Component {
     if (this.props.game.child instanceof LobbyPhase) {
       return <>Waiting for <b>{2 - this.props.game.players.length}</b> more player(s)...</>;
     }
+    const currentUserId = this.props.client.userId;
     if (this.props.game.child instanceof GameInProgressPhase) {
       const gameInProgressPhase = this.props.game.child;
-      return <>Turn: <b>{gameInProgressPhase.state.turn}</b> {gameInProgressPhase.isTurn(this.props.client.userId) && "(Your turn)"}</>;
+      if (gameInProgressPhase.isPlaying(currentUserId)) {
+        return <>Player {currentUserId} - Turn: <b>{gameInProgressPhase.state.turn}</b> {gameInProgressPhase.isTurn(currentUserId) && "(Your turn)"}</>;
+      }
+      return <>Spectating - Turn: <b>{gameInProgressPhase.state.turn}</b></>
     }
     if (this.props.game.child instanceof GameEndedPhase) {
       const gameEndedPhase = this.props.game.child;
       if (gameEndedPhase.state.winner == null) {
-        return <>Draw!</>;
+        return <>Player {currentUserId} - Draw!</>;
       } else {
-        return <>Winner: <b>{gameEndedPhase.state.winner}</b>!</>;
+        return <>Player {currentUserId} - Winner: <b>{gameEndedPhase.state.winner}</b>!</>;
       }
     }
   }

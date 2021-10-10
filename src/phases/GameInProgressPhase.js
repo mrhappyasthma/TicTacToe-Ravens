@@ -10,6 +10,12 @@ export default class GameInProgressPhase  extends Phase {
     };
   }
   
+  /** Returns true if the user ID is one of the players. For spectators, returns false. */
+  isPlaying(userId) {
+    const symbolForUser = this.symbolForUserId(userId);
+    return (this.symbolForUserId(userId) != null)
+  }
+  
   /** Returns true if it is currently the turn for the player with `userID`. */
   isTurn(userId) {
     const symbolForUser = this.symbolForUserId(userId);
@@ -22,9 +28,10 @@ export default class GameInProgressPhase  extends Phase {
     const indexOfUserId = this.players.indexOf(userId);
     if (indexOfUserId == 0) {
       return "O";
-    } else {
+    } else if (indexOfUserId == 1) {
       return "X";
     }
+    return null;
   }
   
   /** Checks the game board to determine if any player has won. */
