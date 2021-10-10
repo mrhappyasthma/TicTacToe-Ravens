@@ -1,9 +1,10 @@
-// @ts-nocheck
 import { InvalidActionError, Phase } from "@ravens-engine/core/lib/core/index.js";
 import { GameStatus } from "@ravens-engine/core/lib/core/GameStatus.js";
 import GameEndedPhase from "./GameEndedPhase"
 
 export default class GameInProgressPhase extends Phase {
+  parent: any;
+
   initialize() {
     this.setStatus(GameStatus.STARTED);
     this.state = {

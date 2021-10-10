@@ -2,6 +2,8 @@ import { Phase } from "@ravens-engine/core/lib/core/index.js";
 import GameInProgressPhase from "./GameInProgressPhase"
 
 export default class LobbyPhase extends Phase {
+  parent: any;
+
   initialize() {
     this.setMaxPlayers(2);
   }
@@ -15,7 +17,6 @@ export default class LobbyPhase extends Phase {
     
     // Start the game automatically once two players have connected.
     if (this.players.length == 2) {
-      // @ts-ignore
       this.parent.setChild(GameInProgressPhase);
     }
   }
