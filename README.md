@@ -1,6 +1,6 @@
 # Love Letter (Ravens)
 
-A simple implementation of the game Love Letter using the [Ravens engine](https://github.com/mrhappyasthma/core).
+A simple implementation of the game [Love Letter](https://en.wikipedia.org/wiki/Love_Letter_(card_game)) using the [Ravens engine](https://github.com/mrhappyasthma/core).
 
 ## Game Rules
 
