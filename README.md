@@ -1,24 +1,8 @@
-# Love Letter (Ravens)
+# TicTacToe (Ravens)
 
-A simple implementation of the game [Love Letter](https://en.wikipedia.org/wiki/Love_Letter_(card_game)) using the [Ravens engine](https://github.com/mrhappyasthma/core).
+A simple implementation of TicTacToe using the [Ravens engine](https://github.com/mrhappyasthma/core).
 
-## Game Rules
-
-### Base game
-
-Love Letter plays 2-4 players.
-
-For a description of the rules, see: https://www.ultraboardgames.com/love-letter/game-rules.php
-
-For a detailed description of each character in the base game, see https://www.ultraboardgames.com/love-letter/the-people.php
-
-### Premium edition
-
-Love Letter Premium extends the game by adding more cards to support 5-8 players.
-
-For the premium edition rules, see: https://www.ultraboardgames.com/love-letter/premium-edition.php
-
-For a detailed description of the new characters introduced in the premium edition, see: https://www.ultraboardgames.com/love-letter/premium-edition.php
+This is heavily based off of the RavensDev [tutorial](https://ravens.dev/tutorial/).
 
 ## Building and Running
 
