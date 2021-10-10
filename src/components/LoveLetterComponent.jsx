@@ -29,7 +29,7 @@ export default class LoveLetterComponent extends React.Component {
     }
     if (this.props.game.child instanceof GameEndedPhase) {
       const gameEndedPhase = this.props.game.child;
-      if (gameEndedPhase.state.winner == 'null') {
+      if (gameEndedPhase.state.winner == null) {
         return <>Draw!</>;
       } else {
         return <>Winner: <b>{gameEndedPhase.state.winner}</b>!</>;
