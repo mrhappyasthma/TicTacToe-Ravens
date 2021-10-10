@@ -20,8 +20,8 @@ export default class GameInProgressPhase  extends Phase {
    * Args:
    *   userId: (string) Corresponds to the ID of the user that performed
    *                    the action
-    *  action: (object) A JS object containing a description of the action
-    *                   performed. Passed in by the action trigger.
+   *  action: (object) A JS object containing a description of the action
+   *                   performed. Passed in by the action trigger.
    */
   applyAction(userId, action) {
     if (action.type == "fill") {
