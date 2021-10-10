@@ -1,4 +1,4 @@
-import { Game } from "@ravens-engine/core/lib/core/index.js";
+import { Game, InvalidActionError } from "@ravens-engine/core/lib/core/index.js";
 
 export default class LoveLetterGame extends Game {
   initialize() {
