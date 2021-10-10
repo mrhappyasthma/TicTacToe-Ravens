@@ -1,6 +1,6 @@
 import { Phase } from "@ravens-engine/core/lib/core/index.js";
 
-export class GameEndedPhase extends Phase {
+export default class GameEndedPhase extends Phase {
   initialize(winner) {
     this.state = {
       winner
