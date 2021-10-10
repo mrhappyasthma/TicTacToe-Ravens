@@ -38,6 +38,9 @@ export default class LoveLetterComponent extends React.Component {
   }
   
   renderGameGrid() {
+    if (this.props.game.child instanceof LobbyPhase) {
+      return;
+    }
     return <>
       {this.props.game.state.grid.map((row, x) => (
         <tr key={x}>
