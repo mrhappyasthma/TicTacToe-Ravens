@@ -7,19 +7,19 @@ export default class CoupComponent extends React.Component {
       const row = [];
 
       for (let y = 0; y < 3; y++) {
-        row.push(<td>{this.props.game.state.grid[x][y]}</td>);
+        row.push(<td style={{ width: '50px', height: '50px', border: '1px solid black'}}>{this.props.game.state.grid[x][y]}</td>);
       }
 
       tableRows.push(<tr>{row}</tr>);
     }
 
     return (
-      <div style="display: flex; align-items: center">
-        <div>{this.props.game.state.turn}</div>
+      <div style={{ display: 'flex', alignItems: 'center'}}>
+        <div>Turn: {this.props.game.state.turn}</div>
         <table>
-		      <tbody>
+		  <tbody>
             {tableRows}
-		      </tbody>
+		  </tbody>
         </table>
       </div>
     );
