@@ -1,8 +1,9 @@
+// @ts-nocheck
 import { InvalidActionError, Phase } from "@ravens-engine/core/lib/core/index.js";
 import { GameStatus } from "@ravens-engine/core/lib/core/GameStatus.js";
-import GameEndedPhase from "./GameEndedPhase.js"
+import GameEndedPhase from "./GameEndedPhase"
 
-export default class GameInProgressPhase  extends Phase {
+export default class GameInProgressPhase extends Phase {
   initialize() {
     this.setStatus(GameStatus.STARTED);
     this.state = {
@@ -11,20 +12,20 @@ export default class GameInProgressPhase  extends Phase {
   }
   
   /** Returns true if the user ID is one of the players. For spectators, returns false. */
-  isPlaying(userId) {
+  isPlaying(userId: string) {
     const symbolForUser = this.symbolForUserId(userId);
     return (this.symbolForUserId(userId) != null)
   }
   
   /** Returns true if it is currently the turn for the player with `userID`. */
-  isTurn(userId) {
+  isTurn(userId: string) {
     const symbolForUser = this.symbolForUserId(userId);
     const turn = this.state.turn;
     return (symbolForUser == turn);
   }
   
   /** Determines the tic-tac-toe symbol for the player's ID. */
-  symbolForUserId(userId) {
+  symbolForUserId(userId: string) {
     const indexOfUserId = this.players.indexOf(userId);
     if (indexOfUserId == 0) {
       return "O";
@@ -78,7 +79,7 @@ export default class GameInProgressPhase  extends Phase {
    *  action: (object) A JS object containing a description of the action
    *                   performed. Passed in by the action trigger.
    */
-  applyAction(userId, action) {
+  applyAction(userId: string, action: any) {
     // This game phase currently only supports the 'fill' action.
     if (action.type != "fill") {
       return;

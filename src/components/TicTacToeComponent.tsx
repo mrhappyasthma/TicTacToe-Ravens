@@ -1,10 +1,15 @@
 import * as React from "react";
 import "../style.css";
+import TicTacToeGame from "../TicTacToeGame"
 import GameEndedPhase from "../phases/GameEndedPhase"
 import GameInProgressPhase from "../phases/GameInProgressPhase"
 import LobbyPhase from "../phases/LobbyPhase"
 
-export default class TicTacToeComponent extends React.Component {
+interface TicTacToeComponentProps {
+  game: TicTacToeGame
+}
+
+export default class TicTacToeComponent extends React.Component<TicTacToeComponentProps> {
   render() {
     return <>
       <div>
