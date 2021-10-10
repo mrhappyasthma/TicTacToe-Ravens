@@ -1,6 +1,6 @@
 # TicTacToe (Ravens)
 
-A simple implementation of TicTacToe using the [Ravens engine](https://github.com/mrhappyasthma/core).
+A simple implementation of TicTacToe using the [Ravens engine](https://github.com/ravens-engine/core).
 
 This is heavily based off of the RavensDev [tutorial](https://ravens.dev/tutorial/).
 
