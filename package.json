@@ -1,22 +1,19 @@
 {
-  "name": "coup-ravens",
-  "version": "1.0.0",
-  "description": "An implementation of the Coup board game using Ravens engine.",
+  "name": "Love Letter (Ravens)",
+  "version": "0.1",
+  "description": "An implementation of the Love Letter board game using Ravens engine.",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrhappyasthma/Coup-Ravens.git"
+    "url": "git+https://github.com/mrhappyasthma/Love-Letter-Ravens.git"
   },
   "author": "mrhappyasthma",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrhappyasthma/Coup-Ravens/issues"
+    "url": "https://github.com/mrhappyasthma/Love-Letter-Ravens/issues"
   },
-  "homepage": "https://github.com/mrhappyasthma/Coup-Ravens#readme",
+  "homepage": "https://github.com/mrhappyasthma/Love-Letter-Ravens#readme",
   "dependencies": {
     "@ravens-engine/core": "^0.20.0",
     "parcel-bundler": "^1.12.5",
