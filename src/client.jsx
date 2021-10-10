@@ -6,5 +6,5 @@ import CoupComponent from "./CoupComponent";
 
 ReactDOM.render(
   <GameComponent gameClass={CoupGame} rootComponent={CoupComponent} />,
-  document.getElementByID("root")
+  document.getElementById("root")
 );
