@@ -17,7 +17,7 @@ export default class LoveLetterGame extends Game {
     this.state = {
       grid: emptyGrid,
       turn: "O"
-    }
+    };
     
     this.setChild(LobbyPhase);
   }
