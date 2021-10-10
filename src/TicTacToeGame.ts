@@ -3,7 +3,11 @@ import GameEndedPhase from "./phases/GameEndedPhase"
 import GameInProgressPhase from "./phases/GameInProgressPhase"
 import LobbyPhase from "./phases/LobbyPhase"
 
-export default class TicTacToeGame extends Game {
+interface TicTacToeGameState {
+  grid: string[][]
+}
+
+export default class TicTacToeGame extends Game<any, TicTacToeGameState> {
   initialize() {
     const emptyGrid = [
       [null, null, null],
@@ -14,7 +18,6 @@ export default class TicTacToeGame extends Game {
     // NOTE: The state of the game must be a pure javascript object
     // to allow for Ravens to seralize it. This means it cannot
     // contain class instances or cyclical references.
-    // @ts-ignore
     this.state = {
       grid: emptyGrid
     };
