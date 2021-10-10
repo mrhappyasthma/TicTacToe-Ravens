@@ -4,7 +4,7 @@ import GameEndedPhase from "../phases/GameEndedPhase"
 import GameInProgressPhase from "../phases/GameInProgressPhase"
 import LobbyPhase from "../phases/LobbyPhase"
 
-export default class LoveLetterComponent extends React.Component {
+export default class TicTacToeComponent extends React.Component {
   render() {
     return <>
       <div>

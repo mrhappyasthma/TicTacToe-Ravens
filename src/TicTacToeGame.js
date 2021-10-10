@@ -3,7 +3,7 @@ import GameEndedPhase from "./phases/GameEndedPhase.js"
 import GameInProgressPhase from "./phases/GameInProgressPhase.js"
 import LobbyPhase from "./phases/LobbyPhase.js"
 
-export default class LoveLetterGame extends Game {
+export default class TicTacToeGame extends Game {
   initialize() {
     const emptyGrid = [
       [null, null, null],
@@ -22,4 +22,4 @@ export default class LoveLetterGame extends Game {
   }
 }
 
-LoveLetterGame.childPhaseClasses = [LobbyPhase, GameInProgressPhase, GameEndedPhase];
+TicTacToeGame.childPhaseClasses = [LobbyPhase, GameInProgressPhase, GameEndedPhase];

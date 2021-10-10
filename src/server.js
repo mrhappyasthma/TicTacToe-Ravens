@@ -1,8 +1,8 @@
 import { Server } from "@ravens-engine/core/lib/server/index.js";
-import LoveLetterGame from "./LoveLetterGame.js";
+import TicTacToeGame from "./TicTacToeGame.js";
 
 const server = new Server({
-  gameClass: LoveLetterGame
+  gameClass: TicTacToeGame
 });
 
 server.start();

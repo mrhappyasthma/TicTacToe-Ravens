@@ -1,19 +1,19 @@
 {
-  "name": "love-letter-ravens",
-  "version": "0.0.1",
-  "description": "An implementation of the Love Letter board game using Ravens engine.",
+  "name": "tictactoe-ravens",
+  "version": "1.0.0",
+  "description": "An implementation of TicTacToe using Ravens engine.",
   "main": "index.js",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrhappyasthma/Love-Letter-Ravens.git"
+    "url": "git+https://github.com/mrhappyasthma/TicTacToe-Ravens.git"
   },
   "author": "mrhappyasthma",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrhappyasthma/Love-Letter-Ravens/issues"
+    "url": "https://github.com/mrhappyasthma/TicTacToe-Ravens/issues"
   },
-  "homepage": "https://github.com/mrhappyasthma/Love-Letter-Ravens#readme",
+  "homepage": "https://github.com/mrhappyasthma/TicTacToe-Ravens#readme",
   "dependencies": {
     "@ravens-engine/core": "^0.20.0",
     "parcel-bundler": "^1.12.5",
