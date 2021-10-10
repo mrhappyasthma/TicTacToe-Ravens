@@ -26,15 +26,15 @@ export default class CoupGame extends Game {
     *  action: (object) A JS object containing a description of the action
     *                   performed. Passed in by the action trigger.
    */
-  processAction(userId, action) {
+  applyAction(userId, action) {
     if (action.type == "fill") {
       // Check if the cell has already been filled.
-      if (this.state.grid[action.cell.y][action.cell.x] != null) {
+      if (this.state.grid[action.cell.x][action.cell.y] != null) {
         throw new InvalidActionError("Invalid move: cell already filled");
       }
 
       // Fill the grid with the new value.
-      this.state.grid[action.cell.y][action.cell.x] = this.state.turn;
+      this.state.grid[action.cell.x][action.cell.y] = this.state.turn;
 
       // Change which symbol's turn it is.
       this.state.turn = (this.state.turn == "O") ? "X" : "O";
