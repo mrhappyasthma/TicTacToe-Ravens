@@ -36,7 +36,18 @@ export default class GameInProgressPhase  extends Phase {
   
   /** Checks the game board to determine if any player has won. */
   isVictory() {
+    const winningMoves = [
+      [[0, 0], [0, 1], [0, 2]],  // Top row
+      [[1, 0], [1, 1], [1, 2]],  // Middle row
+      [[2, 0], [2, 1], [2, 2]],  // Bottom row
+      [[0, 0], [1, 0], [2, 0]],  // Left column
+      [[0, 1], [1, 1], [2, 1]],  // Middle column
+      [[0, 2], [1, 2], [2, 2]],  // Right column
+      [[0, 0], [1, 1], [2, 2]],  // Diagonal (top-left to bottom-right)
+      [[2, 0], [1, 1], [0, 2]],  // Diagonal (bottom-left to top-right)
+    ];
     
+    return ["O", "X"].some(symbol => winningMoves.some(line => line.every(([x,y]) => this.parent.state.grid[x][y] == symbol)));
   }
 
   /** Checks the game board to determine if there is a draw. */
