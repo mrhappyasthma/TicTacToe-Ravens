@@ -17,9 +17,9 @@ export default class CoupComponent extends React.Component {
       <div style="display: flex; align-items: center">
         <div>{this.props.game.state.turn}</div>
         <table>
-		  <tbody>
+		      <tbody>
             {tableRows}
-		  </tbody>
+		      </tbody>
         </table>
       </div>
     );
