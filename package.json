@@ -1,6 +1,6 @@
 {
-  "name": "Love Letter (Ravens)",
-  "version": "0.1",
+  "name": "love-letter-ravens",
+  "version": "0.0.1",
   "description": "An implementation of the Love Letter board game using Ravens engine.",
   "main": "index.js",
   "type": "module",
