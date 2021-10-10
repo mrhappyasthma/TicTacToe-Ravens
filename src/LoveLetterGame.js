@@ -1,6 +1,6 @@
 import { Game } from "@ravens-engine/core/lib/core/index.js";
 
-export default class CoupGame extends Game {
+export default class LoveLetterGame extends Game {
   initialize() {
     const emptyGrid = [
       [null, null, null],

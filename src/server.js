@@ -1,8 +1,8 @@
 import { Server } from "@ravens-engine/core/lib/server/index.js";
-import CoupGame from "./CoupGame.js";
+import CoupGame from "./LoveLetterGame.js";
 
 const server = new Server({
-  gameClass: CoupGame
+  gameClass: LoveLetterGame
 });
 
 server.start();

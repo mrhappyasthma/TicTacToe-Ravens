@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./style.css";
 
-export default class CoupComponent extends React.Component {
+export default class LoveLetterComponent extends React.Component {
   render() {
     const tableRows = [];
     for (let x = 0; x < 3; x++) {
