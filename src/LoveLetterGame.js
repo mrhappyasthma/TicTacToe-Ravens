@@ -1,4 +1,7 @@
 import { Game, InvalidActionError } from "@ravens-engine/core/lib/core/index.js";
+import GameEndedPhase from "./phases/GameEndedPhase.js"
+import GameInProgressPhase from "./phases/GameInProgressPhase.js"
+import LobbyPhase from "./phases/LobbyPhase.js"
 
 export default class LoveLetterGame extends Game {
   initialize() {
@@ -15,6 +18,8 @@ export default class LoveLetterGame extends Game {
       grid: emptyGrid,
       turn: "O"
     }
+    
+    this.setChild(LobbyPhase);
   }
 
   /**
@@ -41,3 +46,5 @@ export default class LoveLetterGame extends Game {
     }
   }
 }
+
+LoveLetterGame.childPhaseClasses = [LobbyPhase, GameInProgressPhase, GameEndedPhase];
