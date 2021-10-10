@@ -4,7 +4,10 @@ table {
 
 td {
     border: 1px solid black;
-	cursor: pointer;
-	height: 50px;
+    height: 50px;
     width: 50px;
+}
+
+td.clickable {
+    cursor: pointer;
 }
